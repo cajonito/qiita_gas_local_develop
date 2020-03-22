@@ -4,5 +4,6 @@ services:
     build: .
     volumes:
       - .:/workdir
+      - ./.clasprc.json:/root/.clasprc.json
     working_dir: /workdir
     command: tail -f /dev/null
