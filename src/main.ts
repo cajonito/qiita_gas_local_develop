@@ -1,11 +1,8 @@
-const greeter = (person: string) => {
-  return `Hello, ${person}!`;
-};
+import { greeter } from "./module";
 
-function testGreeter() {
+declare var global: any;
+
+global.testGreeter = () => {
   const user = "Grant";
   Logger.log(greeter(user));
-
-  const age = 30;
-  Logger.log(greeter(age));
-}
+};
